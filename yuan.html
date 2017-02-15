@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="container">
+    <canvas id="cavsElem">
+        你的浏览器不支持canvas，请升级浏览器
+    </canvas>
+</div>
+</body>
+<script>
+        var canvas = document.querySelector('#cavsElem');
+        var ctx = canvas.getContext('2d');
+        canvas.width = 900;
+        canvas.height = 600;
+        canvas.style.border = "1px solid #000";
+
+        ctx.beginPath();
+        ctx.moveTo(200, 200);
+
+        ctx.arc(200, 200, 100, 0, 2* Math.PI);
+        ctx.fill();
+</script>
+</html>

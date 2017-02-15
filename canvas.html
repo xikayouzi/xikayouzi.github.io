@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas</title>
+</head>
+<body>
+<canvas></canvas>
+</body>
+<script>
+    var cvs = document.getElementsByTagName('canvas')[0];
+    cvs.width = 1000;
+    cvs.height = 1000;
+    var context = cvs.getContext('2d');
+    // 设置 起点
+    context.beginPath();
+    context.moveTo(100,100);
+    context.lineTo(200,0);
+    context.lineTo(200,100);
+    context.lineTo(100,100);
+    context.closePath();
+    context.stroke();
+</script>
+</html>
